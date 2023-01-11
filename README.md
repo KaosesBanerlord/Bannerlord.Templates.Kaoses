@@ -6,24 +6,29 @@
 <p>
    <img src="https://cdn.discordapp.com/attachments/555699650452258816/782380466727944192/unknown.png" width="800">
 </p>
+## Overview
+Base on the template by the BUTR team from [GitHub](https://github.com/BUTR/Bannerlord.Module.Template) it has been customised for ease of use with Kaoses mods.
 
 ## Installation
 1. Install the latest [.NET Core SDK](https://dot.net).
-2. Run `dotnet new install Kaoses.Bannerlord.Templates` to install the project templates.
+2. Run `dotnet new install Bannerlord.Templates.Kaoses` to install the project templates.
+or 
+
+Alternativly can download and install the .nuget package `dotnet new install Bannerlord.Templates.Kaoses.1.0.8.nupkg`
 
 ## Updating
-1. Run `dotnet new --install Bannerlord.Templates.Kaoses` to update the project templates.
+1. Run `dotnet new install Bannerlord.Templates.Kaoses` to update the project templates.
 
 ## Uninstalling
-run `dotnet new uninstall Kaoses.Bannerlord.Templates`
+run `dotnet new uninstall Bannerlord.Templates.Kaoses`
 alternativly run `dotnet new -u` to list all uninstall commands
 
 ## Creating a new Module
 
 ### Creating from command line:
 1. Choose a project template i.e. `blkt`.
-2. Run `dotnet new blkt --help` to see how to select the feature of the project.
-3. Run `dotnet new blkt --name "Bannerlord.MyModule"` along with any other custom options to create a project from the template.
+2. Run `dotnet new bltk --help` to see how to select the feature of the project.
+3. Run `dotnet new bltk --name "Bannerlord.MyModule"` along with any other custom options to create a project from the template.
 
 ### Creating via Visual Studio
 You need to have at least an 16.8.x version to create the template!  

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Module xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/BUTR/Bannerlord.XmlSchemas/master/SubModule.xsd" >
+    <Id value="$moduleid$" />
+    <Name value="$modulename$" />
+    <Version value="v$version$" />
+    <DefaultModule value="false" />
+    <ModuleCategory value="Singleplayer"/>
+    <ModuleType value="Community" />
+    <DependedModules>
+        ---#if (ReferenceHarmony)
+        <DependedModule Id="Bannerlord.Harmony" />
+        ---#endif
+        ---#if (ReferenceButterLib)
+        <DependedModule Id="Bannerlord.ButterLib" />
+        ---#endif
+        ---#if (ReferenceUIExtenderEx)
+        <DependedModule Id="Bannerlord.UIExtenderEx" />
+        ---#endif
+        ---#if (ReferenceMCM)
+        <DependedModule Id="Bannerlord.MBOptionScreen" />
+        ---#endif
+        <DependedModule Id="KaosesCommon" />
+        <DependedModule Id="Native" />
+        <DependedModule Id="SandBoxCore" />
+        <DependedModule Id="Sandbox" />
+        <DependedModule Id="StoryMode" />
+        <DependedModule Id="CustomBattle" />
+    </DependedModules>
+    <!-- Community Dependency Metadata -->
+    <!-- https://github.com/BUTR/Bannerlord.BUTRLoader#for-modders -->
+    <DependedModuleMetadatas>
+        ---#if (ReferenceHarmony)
+        <DependedModuleMetadata id="Bannerlord.Harmony" order="LoadBeforeThis" />
+        ---#endif
+        ---#if (ReferenceButterLib)
+        <DependedModuleMetadata id="Bannerlord.ButterLib" order="LoadBeforeThis" />
+        ---#endif
+        ---#if (ReferenceUIExtenderEx)
+        <DependedModuleMetadata id="Bannerlord.UIExtenderEx" order="LoadBeforeThis" />
+        ---#endif
+        ---#if (ReferenceMCM)
+        <DependedModuleMetadata id="Bannerlord.MBOptionScreen" order="LoadBeforeThis" />
+        ---#endif
+        <DependedModuleMetadata id="KaosesCommon" order="LoadBeforeThis" />
+        <DependedModuleMetadata id="Native" order="LoadBeforeThis" />
+        <DependedModuleMetadata id="SandBoxCore" order="LoadBeforeThis" />
+        <DependedModuleMetadata id="Sandbox" order="LoadBeforeThis" />
+        <DependedModuleMetadata id="StoryMode" order="LoadBeforeThis" />
+        <DependedModuleMetadata id="CustomBattle" order="LoadBeforeThis" />
+    </DependedModuleMetadatas>
+    <!-- Community Dependency Metadata -->
+    <SubModules>
+        ---#if (ReferenceMCMAsSoftDependency)
+        <SubModule>
+            <Name value="MCMv5" />
+            <DLLName value="MCMv5.dll" />
+            <SubModuleClassType value="MCM.MCMSubModule" />
+            <Tags />
+        </SubModule>
+        <SubModule>
+            <Name value="MCMv5 Basic Implementation" />
+            <DLLName value="MCMv5.dll" />
+            <SubModuleClassType value="MCM.Internal.MCMImplementationSubModule" />
+            <Tags />
+        </SubModule>
+        ---#endif
+        <SubModule>
+            <Name value="$moduleid$" />
+            <DLLName value="$moduleid$.dll" />
+            <SubModuleClassType value="$moduleid$.SubModule" />
+            <Tags />
+        </SubModule>
+    </SubModules>
+</Module>

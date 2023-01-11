@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <!-- <Version>1.0.0</Version> -->
+    <Version>1.0.0</Version>
     <TargetFramework>net472</TargetFramework>
     <Platforms>x64</Platforms>
     <LangVersion Condition="'$(langVersion)' != ''">$(ProjectLanguageVersion)</LangVersion>
@@ -71,7 +71,7 @@
     <PackageReference Condition="'$(ReferenceReferenceAssemblies)' == 'true'" Include="Bannerlord.ReferenceAssemblies.CustomBattle" Version="$(GameVersion).*-*" PrivateAssets="All" />
     <PackageReference Condition="'$(ReferenceReferenceAssemblies)' == 'true'" Include="Bannerlord.ReferenceAssemblies.BirthAndDeath" Version="$(GameVersion).*-*" PrivateAssets="All" />
     <PackageReference Condition="'$(ReferenceReferenceAssemblies)' == 'true'" Include="Newtonsoft.Json" Version="11.0.2" PrivateAssets="all" IncludeAssets="compile" />
-	  <PackageReference Include="KaosesCommon" Version="1.0.3" />
+	  <PackageReference Include="KaosesCommon" Version="1.0.8" />
   </ItemGroup>
 
 	<!-- Copies built .nuget packages to the NugetsOutput directory -->

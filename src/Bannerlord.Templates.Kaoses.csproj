@@ -60,6 +60,6 @@
 -->
 	<!-- Copies built .nuget packages to the NugetsOutput directory -->
 	<Target Name="CopyPackage" AfterTargets="Pack">
-		<Copy SourceFiles="$(ProjectDir)\bin\x64\Debug\$(PackageId).$(PackageVersion).nupkg" DestinationFolder="$(NugetsOutput)\$(PackageId).$(PackageVersion).nupkg" />
+		<Copy SourceFiles="$(ProjectDir)bin\Debug\$(PackageId).$(PackageVersion).nupkg" DestinationFolder="$(NugetsOutput)\$(PackageId).$(PackageVersion).nupkg" />
 	</Target>
 </Project>

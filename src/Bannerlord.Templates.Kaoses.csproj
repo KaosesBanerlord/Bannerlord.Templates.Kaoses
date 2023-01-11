@@ -9,7 +9,7 @@
     <ContentTargetFolders>content</ContentTargetFolders>
     <!-- This project has no .NET assemblies, so disable the warning for that -->
     <NoWarn>$(NoWarn);NU5128</NoWarn>
-    <Version>1.0.9</Version>
+    <Version>1.0.10</Version>
   </PropertyGroup>
 
   <PropertyGroup Label="Package">
@@ -21,7 +21,7 @@
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/lazeras/Bannerlord.Templates.Kaoses</PackageProjectUrl>
-    <PackageIcon>kaoses_icon.png</PackageIcon>
+    <PackageIcon>icon.png</PackageIcon>
     <RepositoryUrl>https://github.com/lazeras/Bannerlord.Templates.Kaoses.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>kaoses butr bannerlord</PackageTags>
@@ -39,7 +39,7 @@
   <ItemGroup Label="Files">
     <Content Include="**\*" Exclude="**\bin\**\*;**\obj\**\*;**\.vs\**\*;**\.idea\**\*" />
     <Compile Remove="**\*" />
-    <None Include="..\resources\kaoses_icon.png" Pack="true" PackagePath="\" />
+    <None Include="..\resources\icon.png" Pack="true" PackagePath="\" />
   </ItemGroup>
 	<!-- Copies built .nuget packages to the NugetsOutput directory -->
 	<Target Name="CopyPackage" AfterTargets="Pack">

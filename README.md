@@ -9,7 +9,7 @@
 
 ## Installation
 1. Install the latest [.NET Core SDK](https://dot.net).
-2. Run `dotnet new --install Bannerlord.Templates.Kaoses` to install the project templates.
+2. Run `dotnet new install Bannerlord.Templates.Kaoses` to install the project templates.
 
 ## Updating
 1. Run `dotnet new --install Bannerlord.Templates.Kaoses` to update the project templates.

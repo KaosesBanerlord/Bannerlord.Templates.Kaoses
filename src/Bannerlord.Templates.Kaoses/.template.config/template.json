@@ -6,11 +6,11 @@
     "Games"
   ],
   "name": "Mount &amp; Blade 2: Bannerlord, Kaoses Module Templates",
-  "generatorVersions": "[1.0.0.1-*)",
+  "generatorVersions": "[1.0.0.0-*)",
   "description": "Kaoses Project template for Mount & Blade 2: Bannerlord.",
-  "groupIdentity": "Bannerlord.Module",
+  "groupIdentity": "Bannerlord.Templates.Kaoses",
   "precedence": "5000",
-  "identity": "Bannerlord.Kaoses.CSharp",
+  "identity": "Bannerlord.Templates.Kaoses",
   "shortName": "blkt",
   "tags": {
     "language": "C#",
@@ -95,7 +95,7 @@
           "description": "Install Bannerlord.UIExtenderEx and reference it in SubModules.xml"
         }
       ],
-      "defaultValue": "do-not-install"
+      "defaultValue": "hard-dependency"
     },
     "InstallUIExtenderEx": {
       "type": "parameter",
@@ -111,7 +111,7 @@
           "description": "Install Bannerlord.UIExtenderEx and reference it in SubModules.xml"
         }
       ],
-      "defaultValue": "do-not-install"
+      "defaultValue": "hard-dependency"
     },
     "InstallMCM": {
       "type": "parameter",
@@ -131,7 +131,7 @@
           "description": "Install Bannerlord.MCM and reference only ButterLib in SubModules.xml"
         }
       ],
-      "defaultValue": "do-not-install"
+      "defaultValue": "hard-dependency"
     },
     "InstallReferenceAssemblies": {
       "type": "parameter",
@@ -147,13 +147,13 @@
           "description": "Install Reference Assemblies"
         }
       ],
-      "defaultValue": "do-not-install"
+      "defaultValue": "install"
     },
     "gameVersion": {
       "type": "parameter",
       "dataType": "string",
       "description": "Version of Bannerlord that Reference Assemblies will use",
-      "defaultValue": "1.0.0",
+      "defaultValue": "1.0.3",
       "replaces": "$(ProjectGameVersion)",
       "forms": {
         "global": [
@@ -230,7 +230,7 @@
       "identifier": "xmlEncode"
     }
   },
-  "defaultName": "Kaoses Module1",
+  "defaultName": "KaosesModule1",
   "primaryOutputs": [
     {
       "path": "BLNamespace.csproj"

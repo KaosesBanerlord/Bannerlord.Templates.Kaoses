@@ -1,0 +1,138 @@
+{
+  "$schema": "https://json.schemastore.org/vs-2017.3.host",
+  "order": 0,
+  "learnMoreLink": "https://github.com/BUTR/Bannerlord.Module.Template/blob/master/README.md",
+  "icon": "icon.png",
+  "symbolInfo": [
+    {
+      "id": "Framework",
+      "isVisible": true,
+      "defaultValue": "net472"
+    },
+    {
+      "id": "gameFolder",
+      "name": {
+        "text": "Bannerlord Game Folder Location"
+      },
+      "isVisible": true
+    },
+    {
+      "id": "moduleId",
+      "name": {
+        "text": "Module Internal Id"
+      },
+      "isVisible": true
+    },
+    {
+      "id": "moduleName",
+      "name": {
+        "text": "Module Display Name"
+      },
+      "isVisible": true
+    },
+    {
+      "id": "InstallHarmony",
+      "name": {
+        "text": "Install Harmony"
+      },
+      "choices": [
+        {
+          "id": "do-not-install",
+          "name": {
+            "text": "Do not install"
+          }
+        },
+        {
+          "id": "hard-dependency",
+          "name": {
+            "text": "Install and add reference in SubModule.xml"
+          }
+        }
+      ],
+      "isVisible": true
+    },
+    {
+      "id": "InstallButterLib",
+      "name": {
+        "text": "Install ButterLib"
+      },
+      "choices": [
+        {
+          "id": "do-not-install",
+          "name": {
+            "text": "Do not install"
+          }
+        },
+        {
+          "id": "hard-dependency",
+          "name": {
+            "text": "Install and add reference in SubModule.xml"
+          }
+        }
+      ],
+      "isVisible": true
+    },
+    {
+      "id": "InstallUIExtenderEx",
+      "name": {
+        "text": "Install UIExtenderEx"
+      },
+      "choices": [
+        {
+          "id": "do-not-install",
+          "name": {
+            "text": "Do not install"
+          }
+        },
+        {
+          "id": "hard-dependency",
+          "name": {
+            "text": "Install and add reference in SubModule.xml"
+          }
+        }
+      ],
+      "isVisible": true
+    },
+    {
+      "id": "InstallMCM",
+      "name": {
+        "text": "Install Mod Configuration Menu (MCM)"
+      },
+      "choices": [
+        {
+          "id": "do-not-install",
+          "name": {
+            "text": "Do not install"
+          }
+        },
+        {
+          "id": "hard-dependency",
+          "name": {
+            "text": "Install and add reference in SubModule.xml"
+          }
+        },
+        {
+          "id": "soft-dependency",
+          "name": {
+            "text": "Install as a soft dependency"
+          }
+        }
+      ],
+      "isVisible": true
+    },
+    {
+      "id": "langVersion",
+      "name": {
+        "text": "Language Version"
+      },
+      "isVisible": true
+    },
+    {
+      "id": "nullable",
+      "name": {
+        "text": "Use Nullable Feature"
+      },
+      "isVisible": true
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json.schemastore.org/dotnetcli.host",
+  "symbolInfo": {
+    "Framework": {
+      "longName": "framework"
+    },
+    "gameFolder": {
+      "longName": "game-folder",
+      "shortName": ""
+    },
+    "moduleId": {
+      "longName": "module-id",
+      "shortName": ""
+    },
+    "moduleName": {
+      "longName": "module-name",
+      "shortName": ""
+    },
+    "InstallHarmony": {
+      "longName": "install-harmony",
+      "shortName": ""
+    },
+    "InstallButterLib": {
+      "longName": "install-butterlib",
+      "shortName": ""
+    },
+    "InstallUIExtenderEx": {
+      "longName": "install-uiextenderex",
+      "shortName": ""
+    },
+    "InstallMCM": {
+      "longName": "install-mcm",
+      "shortName": ""
+    },
+    "langVersion": {
+      "longName": "langVersion",
+      "shortName": ""
+    },
+    "nullable": {
+      "longName": "nullable",
+      "shortName": ""
+    },
+    "skipRestore": {
+      "longName": "no-restore",
+      "shortName": ""
+    }
+  },
+  "usageExamples": [
+    ""
+  ]
+}

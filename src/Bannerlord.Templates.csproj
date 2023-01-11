@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Build">
+    <TargetFramework>net5.0</TargetFramework>
+    <PackageType>Template</PackageType>
+    <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
+    <IncludeContentInPack>true</IncludeContentInPack>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <IncludeSymbols>false</IncludeSymbols>
+    <ContentTargetFolders>content</ContentTargetFolders>
+    <!-- This project has no .NET assemblies, so disable the warning for that -->
+    <NoWarn>$(NoWarn);NU5128</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Package">
+    <PackageId>Bannerlord.Templates.Kaoses</PackageId>
+    <Title>Mount &amp; Blade 2: Bannerlord, Kaoses Module Templates</Title>
+    <Authors>Lazeras BUTR Team</Authors>
+    <Description>Kaoses Project template for Mount &amp; Blade 2: Bannerlord.</Description>
+    <Copyright>Copyright © BUTR. All rights Reserved</Copyright>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/BUTR/Bannerlord.Module.Template</PackageProjectUrl>
+    <PackageIcon>icon.png</PackageIcon>
+    <RepositoryUrl>https://github.com/BUTR/Bannerlord.Module.Template.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>kaoses butr bannerlord</PackageTags>
+    <PackageReleaseNotes>https://github.com/BUTR/Bannerlord.Module.Template/releases</PackageReleaseNotes>
+  </PropertyGroup>
+
+  <ItemGroup Label="Files">
+    <Content Include="**\*" Exclude="**\bin\**\*;**\obj\**\*;**\.vs\**\*;**\.idea\**\*" />
+    <Compile Remove="**\*" />
+    <None Include="..\resources\icon.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup Label="Package References">
+    <PackageReference Include="MinVer" PrivateAssets="all" Version="4.2.0" />
+  </ItemGroup>
+
+  <Target Name="Versioning" AfterTargets="MinVer">
+    <PropertyGroup>
+      <BUILD_NUMBER Condition="'$(BUILD_NUMBER)' == ''">0</BUILD_NUMBER>
+      <PackageVersion>$(MinVerMajor).$(MinVerMinor).$(MinVerPatch).$(BUILD_NUMBER)</PackageVersion>
+    </PropertyGroup>
+  </Target>
+
+</Project>

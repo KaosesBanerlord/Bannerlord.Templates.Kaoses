@@ -2,11 +2,11 @@ using MCM.Abstractions;
 using MCM.Abstractions.Attributes;
 using MCM.Abstractions.Attributes.v2;
 using MCM.Abstractions.Base.Global;
+using MCM.Common;
 using System;
 using System.Collections.Generic;
 using TaleWorlds.Localization;
 //using MCM.Abstractions.Settings.Base.PerSave;
-using TaleWorlds.Localization;
 
 
 namespace BLNamespace.Settings

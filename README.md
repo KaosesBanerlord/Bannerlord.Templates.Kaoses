@@ -9,10 +9,14 @@
 
 ## Installation
 1. Install the latest [.NET Core SDK](https://dot.net).
-2. Run `dotnet new install Bannerlord.Templates.Kaoses` to install the project templates.
+2. Run `dotnet new install Kaoses.Bannerlord.Templates` to install the project templates.
 
 ## Updating
 1. Run `dotnet new --install Bannerlord.Templates.Kaoses` to update the project templates.
+
+## Uninstalling
+run `dotnet new uninstall Kaoses.Bannerlord.Templates`
+alternativly run `dotnet new -u` to list all uninstall commands
 
 ## Creating a new Module
 
@@ -27,6 +31,8 @@ You also need to use the new template feature:
 <p>
    <img src="https://devblogs.microsoft.com/dotnet/wp-content/uploads/sites/10/2020/09/clitemplates-option-enable.png" width="600">
 </p>
+Alternativly
+Open Visual Studio Installer. Locate the Visual Studio 2022 panel and click "Modify". On the right, in the "Installation details" menu, under "ASP.NET and web development" and then "Optional", check "Additional project templats (previous versions)". Click "Modify" and you'll be done!
 
 ## FAQ
 ### What 'Target Framework' should I chose?

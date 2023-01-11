@@ -6,7 +6,7 @@
     "Games"
   ],
   "name": "Mount &amp; Blade 2: Bannerlord, Kaoses Module Templates",
-  "generatorVersions": "[1.0.0.0-*)",
+  "generatorVersions": "[1.0.0.1-*)",
   "description": "Kaoses Project template for Mount & Blade 2: Bannerlord.",
   "groupIdentity": "Bannerlord.Module",
   "precedence": "5000",

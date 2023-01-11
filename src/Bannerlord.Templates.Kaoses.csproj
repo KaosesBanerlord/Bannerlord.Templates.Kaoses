@@ -12,7 +12,7 @@
   </PropertyGroup>
 
   <PropertyGroup Label="Package">
-    <PackageId>Kaoses.Bannerlord.Templates</PackageId>
+    <PackageId>Bannerlord.Templates.Kaoses</PackageId>
     <Title>Mount &amp; Blade 2: Bannerlord, Kaoses Module Templates</Title>
     <Authors>Lazeras BUTR Team</Authors>
     <Description>Kaoses Project template for Mount &amp; Blade 2: Bannerlord.</Description>
@@ -25,7 +25,9 @@
     <RepositoryType>git</RepositoryType>
     <PackageTags>kaoses butr bannerlord</PackageTags>
     <PackageReleaseNotes>https://github.com/lazeras/Bannerlord.Templates.Kaoses/releases</PackageReleaseNotes>
-    <PackageVersion>1.0.0</PackageVersion>
+    <!-- <version>1.0.5</version> -->
+		<!-- The directory .nuget packages are ouputed to if build .nuget package option is selected under build options in visual studio -->
+    <NugetsOutput>U:\Nuget.Local</NugetsOutput>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -44,5 +46,20 @@
     <PackageReference Include="MinVer" PrivateAssets="all" Version="4.2.0" />
   </ItemGroup>
 
-
+  <Target Name="Versioning" AfterTargets="MinVer">
+    <PropertyGroup>
+      <BUILD_NUMBER Condition="'$(BUILD_NUMBER)' == ''">0</BUILD_NUMBER>
+      <PackageVersion>$(MinVerMajor).$(MinVerMinor).$(MinVerPatch).$(BUILD_NUMBER)</PackageVersion>
+    </PropertyGroup>
+  </Target>
+<!--
+<PropertyGroup>
+  <VersionPrefix>1.0.5</VersionPrefix>
+  <VersionSuffix></VersionSuffix>
+</PropertyGroup>
+-->
+	<!-- Copies built .nuget packages to the NugetsOutput directory -->
+	<Target Name="CopyPackage" AfterTargets="Pack">
+		<Copy SourceFiles="$(ProjectDir)\bin\x64\Debug\$(PackageId).$(PackageVersion).nupkg" DestinationFolder="$(NugetsOutput)\$(PackageId).$(PackageVersion).nupkg" />
+	</Target>
 </Project>

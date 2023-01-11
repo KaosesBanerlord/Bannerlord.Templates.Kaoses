@@ -19,7 +19,7 @@ namespace BLNamespace
     public class SubModule : MBSubModuleBase
     {
         public const bool UsesHarmony = true;
-        public const string ModuleId = "$(ProjectModuleId)";
+        public const string ModuleId = "BLNamespace";
         public const string modulePath = @"..\\..\\Modules\\" + ModuleId + "\\";
         public const string HarmonyId = ModuleId + ".harmony";
         private Harmony? _harmony;

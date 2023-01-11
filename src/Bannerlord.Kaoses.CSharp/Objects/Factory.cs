@@ -2,7 +2,7 @@ using KaosesCommon.Utils;
 using BLNamespace.Settings;
 using System.Reflection;
 
-namespace BLNamespace
+namespace BLNamespace.Objects
 {
     /// <summary>
     /// BLNamespace Factory Object
@@ -31,7 +31,7 @@ namespace BLNamespace
                     _settings = Config.Instance;
                     if (_settings is null)
                     {
-                        IM.ShowMessageBox("$(ProjectModuleName Failed to load MCM config provider", "$(ProjectModuleName MCM Error");
+                        IM.ShowMessageBox("$(ProjectModuleName) Failed to load MCM config provider", "$(ProjectModuleName) MCM Error");
                     }
                 }
                 return _settings;

@@ -14,7 +14,7 @@ Base on the template by the BUTR team from [GitHub](https://github.com/BUTR/Bann
 2. Run `dotnet new install Bannerlord.Templates.Kaoses` to install the project templates.
 or 
 
-Alternativly can download and install the .nuget package `dotnet new install Bannerlord.Templates.Kaoses.1.0.8.nupkg`
+Alternativly can download and install the .nuget package `dotnet new install Bannerlord.Templates.Kaoses.x.x.x.nupkg`
 
 ## Updating
 1. Run `dotnet new install Bannerlord.Templates.Kaoses` to update the project templates.
@@ -22,6 +22,9 @@ Alternativly can download and install the .nuget package `dotnet new install Ban
 ## Uninstalling
 run `dotnet new uninstall Bannerlord.Templates.Kaoses`
 alternativly run `dotnet new -u` to list all uninstall commands
+
+## Packaging
+changee NugetsOutput to a folder in Bannerlord.Templates.Kaoses.csproj then in a terminal at the src folder run `dotnet pack`. The nuget file will be copied to the output folder 
 
 ## Creating a new Module
 

@@ -10,5 +10,7 @@
 		<string id="debug_desc" text="Displays mod developer debug information and logs them to the file" />
 		<string id="debuglog" text="Log to file" />
 		<string id="debuglog_desc" text="Log information messages to the log file as well as errors and debug" />
+		<string id="debugharmony" text="Debug Harmony" />
+		<string id="debugharmony_desc" text="Enable/Disable harmony's debuging logs" />
   </strings>
 </base>

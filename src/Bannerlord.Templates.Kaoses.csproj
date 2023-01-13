@@ -9,12 +9,12 @@
     <ContentTargetFolders>content</ContentTargetFolders>
     <!-- This project has no .NET assemblies, so disable the warning for that -->
     <NoWarn>$(NoWarn);NU5128</NoWarn>
-    <Version>1.0.10</Version>
+    <Version>1.0.13</Version>
   </PropertyGroup>
 
   <PropertyGroup Label="Package">
     <PackageId>Bannerlord.Templates.Kaoses</PackageId>
-    <Title>Mount &amp; Blade 2: Bannerlord, Kaoses Module Templates</Title>
+    <Title>Kaoses Mount &amp; Blade 2: Bannerlord, Module Templates</Title>
     <Authors>Lazeras, BUTR Team</Authors>
     <Description>Kaoses Project template for Mount &amp; Blade 2: Bannerlord.</Description>
     <Copyright>Copyright © BUTR. All rights Reserved</Copyright>
@@ -35,6 +35,13 @@
     <RootNamespace>Bannerlord.Templates.Kaoses</RootNamespace>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
+
+	<ItemGroup>
+		<None Update="ReadMe.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
 
   <ItemGroup Label="Files">
     <Content Include="**\*" Exclude="**\bin\**\*;**\obj\**\*;**\.vs\**\*;**\.idea\**\*" />

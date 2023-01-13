@@ -38,13 +38,41 @@ namespace BLNamespace.Settings
         public string ModDisplayName { get { return DisplayName; } }
         #endregion
 
+        #region Debug
+
         [SettingPropertyBool("{=debug}Debug", RequireRestart = false, HintText = "{=debug_desc}Displays mod developer debug information and logs them to the file")]
         [SettingPropertyGroup("Debug", GroupOrder = 1)]
+        //-:cnd:noEmit
+        #if DEBUG
         public bool Debug { get; set; } = true;
-
+        #else
+        public bool Debug { get; set; } = false;
+        #endif
+        //+:cnd:noEmit
         [SettingPropertyBool("{=debuglog}Log to file", RequireRestart = false, HintText = "{=debuglog_desc}Log information messages to the log file as well as errors and debug")]
         [SettingPropertyGroup("Debug", GroupOrder = 2)]
+        //-:cnd:noEmit
+        #if DEBUG
         public bool LogToFile { get; set; } = true;
+        #else
+        public bool LogToFile { get; set; } = false;
+        #endif
+        //+:cnd:noEmit
+        
+
+        [SettingPropertyBool("{=debugharmony}Debug Harmony", RequireRestart = false, HintText = "{=debugharmony_desc}Enable/Disable harmony's debuging logs")]
+        [SettingPropertyGroup("Debug", GroupOrder = 2)]
+        //-:cnd:noEmit
+        #if DEBUG
+        public bool IsHarmonyDebug { get; set; } = true;
+        #else
+        public bool IsHarmonyDebug { get; set; } = false;
+        #endif
+        //+:cnd:noEmit
+        
+
+        #endregion //~Debug
+
 
         ///~ Mod Specific settings 
         #region Mod Specific settings

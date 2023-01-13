@@ -5,13 +5,13 @@
     "Bannerlord",
     "Games"
   ],
-  "name": "Mount &amp; Blade 2: Bannerlord, Kaoses Module Templates",
+  "name": "Kaoses Mount & Blade 2: Bannerlord Module",
   "generatorVersions": "[1.0.0.0-*)",
   "description": "Kaoses Project template for Mount & Blade 2: Bannerlord.",
-  "groupIdentity": "Bannerlord.Templates.Kaoses",
+  "groupIdentity": "Bannerlord.Module",
   "precedence": "5000",
   "identity": "Bannerlord.Templates.Kaoses",
-  "shortName": "blkt",
+  "shortName": "bltk",
   "tags": {
     "language": "C#",
     "type": "project"
@@ -62,7 +62,7 @@
       "type": "parameter",
       "dataType": "string",
       "description": "Module's display name",
-      "defaultValue": "Kaoses ",
+      "defaultValue": "",
       "replaces": "$(ProjectModuleName)"
     },
     "InstallHarmony": {
@@ -95,7 +95,7 @@
           "description": "Install Bannerlord.UIExtenderEx and reference it in SubModules.xml"
         }
       ],
-      "defaultValue": "hard-dependency"
+      "defaultValue": "do-not-install"
     },
     "InstallUIExtenderEx": {
       "type": "parameter",
@@ -111,7 +111,7 @@
           "description": "Install Bannerlord.UIExtenderEx and reference it in SubModules.xml"
         }
       ],
-      "defaultValue": "hard-dependency"
+      "defaultValue": "do-not-install"
     },
     "InstallMCM": {
       "type": "parameter",
@@ -131,7 +131,7 @@
           "description": "Install Bannerlord.MCM and reference only ButterLib in SubModules.xml"
         }
       ],
-      "defaultValue": "hard-dependency"
+      "defaultValue": "do-not-install"
     },
     "InstallReferenceAssemblies": {
       "type": "parameter",
@@ -230,7 +230,7 @@
       "identifier": "xmlEncode"
     }
   },
-  "defaultName": "KaosesModule1",
+  "defaultName": "Bannerlord.Module1",
   "primaryOutputs": [
     {
       "path": "BLNamespace.csproj"

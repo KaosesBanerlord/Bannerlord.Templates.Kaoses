@@ -42,7 +42,7 @@ namespace BLNamespace
                         {
                             if (_harmony == null)
                             {
-                                Harmony.DEBUG = true;
+                                Harmony.DEBUG = Factory.Settings.IsHarmonyDebug;
 #pragma warning disable CS8602 // Dereference of a possibly null reference.
                                 _harmony = new Harmony(ModuleId);
                                 _harmony.PatchAll(Assembly.GetExecutingAssembly());
@@ -69,7 +69,8 @@ namespace BLNamespace
         }
 
         /// <summary>
-        /// Called during the first loading screen of the game, always the first override to be called, this is where you should be doing the bulk of your initial setup
+        /// Called during the first loading screen of the game, always the first override to be called, 
+        /// this is where you should be doing the bulk of your initial setup
         /// </summary>
         protected override void OnSubModuleLoad()
         {
@@ -78,11 +79,12 @@ namespace BLNamespace
 
         /// <summary>
         /// Called once the initialization for a game mode has finished
+        /// Called 4th after choosing (Resume Game, Campaign, Custom Battle) from the main menu.
         /// </summary>
         /// <param name="game"></param>
         public override void OnGameInitializationFinished(Game game)
         {
-            // Called 4th after choosing (Resume Game, Campaign, Custom Battle) from the main menu.
+            
             base.OnGameInitializationFinished(game);
             if (!(game.GameType is Campaign))
             {
@@ -169,7 +171,8 @@ namespace BLNamespace
         }
 
         /// <summary>
-        /// This is called once every frame, you should avoid expensive operations being called directly here and instead do as little work as possible for performance reasons.
+        /// This is called once every frame, you should avoid expensive operations being called directly here and 
+        /// instead do as little work as possible for performance reasons.
         /// </summary>
         /// <param name="dt">The time in milliseconds the frame took to complete</param> 
         public override void OnMissionBehaviorInitialize(Mission mission)

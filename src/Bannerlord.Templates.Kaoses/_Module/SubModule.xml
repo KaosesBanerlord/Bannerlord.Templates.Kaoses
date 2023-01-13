@@ -9,18 +9,20 @@
     <ModuleType value="Community" />
     <DependedModules>
         ---#if (ReferenceHarmony)
-        <DependedModule Id="Bannerlord.Harmony" />
+        <DependedModule Id="Bannerlord.Harmony"  DependentVersion="v2.2.2.140"/>
         ---#endif
         ---#if (ReferenceButterLib)
-        <DependedModule Id="Bannerlord.ButterLib" />
+        <DependedModule Id="Bannerlord.ButterLib" DependentVersion="v2.6.1" />
         ---#endif
         ---#if (ReferenceUIExtenderEx)
-        <DependedModule Id="Bannerlord.UIExtenderEx" />
+        <DependedModule Id="Bannerlord.UIExtenderEx" DependentVersion="v2.4.0" />
         ---#endif
         ---#if (ReferenceMCM)
-        <DependedModule Id="Bannerlord.MBOptionScreen" />
+        <DependedModule Id="Bannerlord.MBOptionScreen" DependentVersion="v5.4.5" />
         ---#endif
-        <DependedModule Id="KaosesCommon" />
+        ---#if (ReferenceKC)
+        <DependedModule Id="KaosesCommon" DependentVersion="v1.0.8" />
+        ---#endif
         <DependedModule Id="Native" />
         <DependedModule Id="SandBoxCore" />
         <DependedModule Id="Sandbox" />
@@ -31,23 +33,25 @@
     <!-- https://github.com/BUTR/Bannerlord.BUTRLoader#for-modders -->
     <DependedModuleMetadatas>
         ---#if (ReferenceHarmony)
-        <DependedModuleMetadata id="Bannerlord.Harmony" order="LoadBeforeThis" />
+        <DependedModuleMetadata id="Bannerlord.Harmony" order="LoadBeforeThis" version="v2.2.2.140" optional="false"  />
         ---#endif
         ---#if (ReferenceButterLib)
-        <DependedModuleMetadata id="Bannerlord.ButterLib" order="LoadBeforeThis" />
+        <DependedModuleMetadata id="Bannerlord.ButterLib" order="LoadBeforeThis" version="v2.6.1" optional="false"  />
         ---#endif
         ---#if (ReferenceUIExtenderEx)
-        <DependedModuleMetadata id="Bannerlord.UIExtenderEx" order="LoadBeforeThis" />
+        <DependedModuleMetadata id="Bannerlord.UIExtenderEx" order="LoadBeforeThis" version="v2.4.0" optional="false"  />
         ---#endif
         ---#if (ReferenceMCM)
-        <DependedModuleMetadata id="Bannerlord.MBOptionScreen" order="LoadBeforeThis" />
+        <DependedModuleMetadata id="Bannerlord.MBOptionScreen" order="LoadBeforeThis" version="v5.4.5" optional="false" />
         ---#endif
-        <DependedModuleMetadata id="KaosesCommon" order="LoadBeforeThis" />
-        <DependedModuleMetadata id="Native" order="LoadBeforeThis" />
-        <DependedModuleMetadata id="SandBoxCore" order="LoadBeforeThis" />
-        <DependedModuleMetadata id="Sandbox" order="LoadBeforeThis" />
-        <DependedModuleMetadata id="StoryMode" order="LoadBeforeThis" />
-        <DependedModuleMetadata id="CustomBattle" order="LoadBeforeThis" />
+        ---#if (ReferenceKC)
+        <DependedModuleMetadata id="KaosesCommon" order="LoadBeforeThis" version="v1.0.8" optional="false"  />
+        ---#endif
+        <DependedModuleMetadata id="Native" order="LoadBeforeThis" version="e$gameversion$.*" />
+        <DependedModuleMetadata id="SandBoxCore" order="LoadBeforeThis" version="e$gameversion$.*" />
+        <DependedModuleMetadata id="Sandbox" order="LoadBeforeThis" version="e$gameversion$.*" />
+        <DependedModuleMetadata id="StoryMode" order="LoadBeforeThis" version="e$gameversion$.*" />
+        <DependedModuleMetadata id="CustomBattle" order="LoadBeforeThis" version="e$gameversion$.*" />
     </DependedModuleMetadatas>
     <!-- Community Dependency Metadata -->
     <SubModules>

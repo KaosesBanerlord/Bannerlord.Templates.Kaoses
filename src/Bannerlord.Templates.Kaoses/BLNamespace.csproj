@@ -64,6 +64,7 @@
     <PackageReference Condition="'$(ReferenceButterLib)' == 'true'" Include="Bannerlord.ButterLib" Version="2.5.1" IncludeAssets="compile" />
     <PackageReference Condition="'$(ReferenceMCM)' == 'true' AND '$(ReferenceMCMAsSoftDependency)' != 'true'" Include="Bannerlord.MCM" Version="5.3.2" IncludeAssets="compile" />
     <PackageReference Condition="'$(ReferenceMCM)' == 'true' AND '$(ReferenceMCMAsSoftDependency)' == 'true'" Include="Bannerlord.MCM" Version="5.3.2" />
+    <PackageReference Include="KaosesCommon" Version="1.0.8" IncludeAssets="compile" />
     <PackageReference Condition="'$(ReferenceReferenceAssemblies)' == 'true'" Include="Bannerlord.ReferenceAssemblies.Core" Version="$(GameVersion).*-*" PrivateAssets="All" />
     <PackageReference Condition="'$(ReferenceReferenceAssemblies)' == 'true'" Include="Bannerlord.ReferenceAssemblies.Native" Version="$(GameVersion).*-*" PrivateAssets="All" />
     <PackageReference Condition="'$(ReferenceReferenceAssemblies)' == 'true'" Include="Bannerlord.ReferenceAssemblies.StoryMode" Version="$(GameVersion).*-*" PrivateAssets="All" />
@@ -71,7 +72,7 @@
     <PackageReference Condition="'$(ReferenceReferenceAssemblies)' == 'true'" Include="Bannerlord.ReferenceAssemblies.CustomBattle" Version="$(GameVersion).*-*" PrivateAssets="All" />
     <PackageReference Condition="'$(ReferenceReferenceAssemblies)' == 'true'" Include="Bannerlord.ReferenceAssemblies.BirthAndDeath" Version="$(GameVersion).*-*" PrivateAssets="All" />
     <PackageReference Condition="'$(ReferenceReferenceAssemblies)' == 'true'" Include="Newtonsoft.Json" Version="11.0.2" PrivateAssets="all" IncludeAssets="compile" />
-	  <PackageReference Include="KaosesCommon" Version="1.0.8" />
+	  
   </ItemGroup>
 
 	<!-- Copies built .nuget packages to the NugetsOutput directory -->

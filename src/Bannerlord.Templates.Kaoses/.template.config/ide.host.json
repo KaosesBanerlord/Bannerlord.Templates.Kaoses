@@ -71,7 +71,7 @@
         }
       ],
       "isVisible": true
-    }
+    },
     {
       "id": "InstallButterLib",
       "name": {
@@ -142,24 +142,10 @@
       "isVisible": true
     },
     {
-      "id": "InstallReferenceAssemblies",
+      "id": "ReferenceAssemblies",
       "name": {
-        "text": "Install Reference Assemblies"
+        "text": "Reference game dll or BUTR nuget assemblies"
       },
-      "choices": [
-        {
-          "id": "do-not-install",
-          "name": {
-            "text": "Do not install"
-          }
-        },
-        {
-          "id": "install",
-          "name": {
-            "text": "Install"
-          }
-        }
-      ],
       "isVisible": true
     },
     {

@@ -37,8 +37,8 @@
       "longName": "install-mcm",
       "shortName": ""
     },
-    "InstallReferenceAssemblies": {
-      "longName": "install-reference-assemblies",
+    "ReferenceAssemblies": {
+      "longName": "install-ReferenceAssemblies",
       "shortName": ""
     },
     "gameVersion": {

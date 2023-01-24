@@ -147,23 +147,19 @@
           "description": "Install Bannerlord.MCM and reference only ButterLib in SubModules.xml"
         }
       ],
-      "defaultValue": "do-not-install"
+      "defaultValue": "hard-dependency"
     },
-    "InstallReferenceAssemblies": {
+    "ReferenceAssemblies": {
       "type": "parameter",
-      "datatype": "choice",
-      "description": "Specifies if the reference assemblies should be used instead of referencing the game assemblies from the game folder to compile against",
-      "choices": [
-        {
-          "choice": "do-not-install",
-          "description": "Do not install Reference Assemblies. Assemblies from the game's folder will be used instead"
-        },
-        {
-          "choice": "install",
-          "description": "Install Reference Assemblies"
-        }
-      ],
-      "defaultValue": "install"
+      "dataType": "string",
+      "description": "Set to true to use the game dll files or false to use BUTR nget reference assemblies",
+      "defaultValue": "false",
+      "replaces": "$(ProjectReferenceAssemblies)",
+      "forms": {
+        "global": [
+          "encode"
+        ]
+      }
     },
     "gameVersion": {
       "type": "parameter",
@@ -230,7 +226,6 @@
       "type": "computed",
       "value": "(InstallKaosesCommon == \"hard-dependency\")"
     },
-    
     "ReferenceButterLib": {
       "type": "computed",
       "value": "(InstallButterLib == \"hard-dependency\" || InstallMCM == \"hard-dependency\")"
@@ -247,14 +242,7 @@
       "type": "computed",
       "value": "(InstallMCM == \"soft-dependency\")"
     },
-    "ReferenceReferenceAssemblies": {
-      "type": "computed",
-      "value": "(InstallReferenceAssemblies == \"install\")"
-    },
-    "ReferenceGameAssemblies": {
-      "type": "computed",
-      "value": "(InstallReferenceAssemblies == \"do-not-install\")"
-    },
+
     "RunHarmony": {
       "type": "computed",
       "value": "(InstallHarmony == \"hard-dependency\" || InstallButterLib == \"hard-dependency\" || InstallUIExtenderEx == \"hard-dependency\" || InstallMCM == \"hard-dependency\" || InstallMCM == \"soft-dependency\")"

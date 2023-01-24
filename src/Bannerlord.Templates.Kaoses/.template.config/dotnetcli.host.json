@@ -21,6 +21,10 @@
       "longName": "install-harmony",
       "shortName": ""
     },
+    "InstallKaosesCommon": {
+      "longName": "install-KaosesCommon",
+      "shortName": ""
+    },
     "InstallButterLib": {
       "longName": "install-butterlib",
       "shortName": ""
@@ -39,6 +43,18 @@
     },
     "gameVersion": {
       "longName": "gameVersion",
+      "shortName": ""
+    },
+    "betaGameVersion": {
+      "longName": "betaGameVersion",
+      "shortName": ""
+    },
+    "isStableVersion": {
+      "longName": "isStableVersion",
+      "shortName": ""
+    },
+    "isBetaVersionVersion": {
+      "longName": "isBetaVersionVersion",
       "shortName": ""
     },
     "langVersion": {

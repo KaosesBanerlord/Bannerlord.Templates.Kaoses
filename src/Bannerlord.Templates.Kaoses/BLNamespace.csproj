@@ -9,10 +9,32 @@
     <ModuleId>$(ProjectModuleId)</ModuleId>
     <ModuleName>$(ProjectModuleName)</ModuleName>
     <GameFolder>$(ProjectGameFolder)</GameFolder>
-    <GameVersion Condition="'$(ReferenceReferenceAssemblies)' == 'true'">$(ProjectGameVersion)</GameVersion>
+    <GameVersion>$(ProjectGameVersion)</GameVersion>
+    <IsStable>$(ProjectIsStableVersion)</IsStable>
+    <IsBeta>$(ProjectIsBetaVersion)</IsBeta>
 		<!-- The directory .nuget packages are ouputed to if build .nuget package option is selected under build options in visual studio -->
     <NugetsOutput>U:\Nuget.Local</NugetsOutput>
   </PropertyGroup>
+
+
+  <PropertyGroup>
+    <GameVersion Condition="$(IsStable) == 'false'">$(ProjectGameVersion)</GameVersion>
+    <GameVersion Condition="$(IsBeta) == 'false'">$(ProjectBetaGameVersion)</GameVersion>
+  </PropertyGroup>
+  <!-- Game Folder(s) -->
+  <PropertyGroup>
+    <!--
+    Bannerlord's Root Folder. Leave empty if you want to try autoresolution. Recommended setup is to set, as an
+    environment variable, BANNERLORD_GAME_DIR in the common case that you have only one game folder. If you have
+    separate game folders for the stable and beta versions of the game, likewise set BANNERLORD_STABLE_DIR and
+    BANNERLORD_BETA_DIR.
+    -->
+    <GameFolder Condition="$(IsStable) == 'true'">$(BANNERLORD_STABLE_DIR)</GameFolder>
+    <GameFolder Condition="$(IsBeta) == 'true'">$(BANNERLORD_BETA_DIR)</GameFolder>
+    <GameFolder Condition="$(GameFolder) == ''">$(BANNERLORD_GAME_DIR)</GameFolder>
+  </PropertyGroup>
+
+
 
   <ItemGroup Condition="'$(ReferenceGameAssemblies)' == 'true'">
     <Reference Include="$(GameFolder)\bin\Win64_Shipping_Client\Newtonsoft.Json.dll">
@@ -64,7 +86,7 @@
     <PackageReference Condition="'$(ReferenceButterLib)' == 'true'" Include="Bannerlord.ButterLib" Version="2.5.1" IncludeAssets="compile" />
     <PackageReference Condition="'$(ReferenceMCM)' == 'true' AND '$(ReferenceMCMAsSoftDependency)' != 'true'" Include="Bannerlord.MCM" Version="5.3.2" IncludeAssets="compile" />
     <PackageReference Condition="'$(ReferenceMCM)' == 'true' AND '$(ReferenceMCMAsSoftDependency)' == 'true'" Include="Bannerlord.MCM" Version="5.3.2" />
-    <PackageReference Include="KaosesCommon" Version="1.0.8" IncludeAssets="compile" />
+    <PackageReference Condition="'$(ReferenceKaosesComon)' == 'true'" Include="KaosesCommon" Version="1.0.8" IncludeAssets="compile" />
     <PackageReference Condition="'$(ReferenceReferenceAssemblies)' == 'true'" Include="Bannerlord.ReferenceAssemblies.Core" Version="$(GameVersion).*-*" PrivateAssets="All" />
     <PackageReference Condition="'$(ReferenceReferenceAssemblies)' == 'true'" Include="Bannerlord.ReferenceAssemblies.Native" Version="$(GameVersion).*-*" PrivateAssets="All" />
     <PackageReference Condition="'$(ReferenceReferenceAssemblies)' == 'true'" Include="Bannerlord.ReferenceAssemblies.StoryMode" Version="$(GameVersion).*-*" PrivateAssets="All" />

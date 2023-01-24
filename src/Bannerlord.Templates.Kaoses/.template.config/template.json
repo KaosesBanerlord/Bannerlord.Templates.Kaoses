@@ -81,6 +81,22 @@
       ],
       "defaultValue": "hard-dependency"
     },
+    "InstallKaosesCommon": {
+      "type": "parameter",
+      "dataType": "choice",
+      "description": "Specifies if Kaoses Common should be installed",
+      "choices": [
+        {
+          "choice": "do-not-install",
+          "description": "Do not install Kaoses Common"
+        },
+        {
+          "choice": "hard-dependency",
+          "description": "Install Kaoses Common and reference it in SubModules.xml"
+        }
+      ],
+      "defaultValue": "hard-dependency"
+    },
     "InstallButterLib": {
       "type": "parameter",
       "dataType": "choice",
@@ -161,6 +177,32 @@
         ]
       }
     },
+    "betaGameVersion": {
+      "type": "parameter",
+      "dataType": "string",
+      "description": "Beta Version of Bannerlord that Reference Assemblies will use",
+      "defaultValue": "1.1.0",
+      "replaces": "$(ProjectBetaGameVersion)",
+      "forms": {
+        "global": [
+          "encode"
+        ]
+      }
+    },
+    "isStableVersion": {
+      "type": "parameter",
+      "datatype": "text",
+      "description": "Sets the LangVersion property in the created project file",
+      "defaultValue": "false",
+      "replaces": "$(ProjectIsStableVersion)"
+    },
+    "isBetaVersionVersion": {
+      "type": "parameter",
+      "datatype": "text",
+      "description": "Sets the LangVersion property in the created project file",
+      "defaultValue": "false",
+      "replaces": "$(ProjectIsBetaVersion)"
+    },
     "langVersion": {
       "type": "parameter",
       "datatype": "text",
@@ -184,6 +226,11 @@
       "type": "computed",
       "value": "(InstallHarmony == \"hard-dependency\" || InstallButterLib == \"hard-dependency\" || InstallUIExtenderEx == \"hard-dependency\" || InstallMCM == \"hard-dependency\" || InstallMCM == \"soft-dependency\")"
     },
+    "ReferenceKaosesComon": {
+      "type": "computed",
+      "value": "(InstallKaosesCommon == \"hard-dependency\")"
+    },
+    
     "ReferenceButterLib": {
       "type": "computed",
       "value": "(InstallButterLib == \"hard-dependency\" || InstallMCM == \"hard-dependency\")"
@@ -211,6 +258,10 @@
     "RunHarmony": {
       "type": "computed",
       "value": "(InstallHarmony == \"hard-dependency\" || InstallButterLib == \"hard-dependency\" || InstallUIExtenderEx == \"hard-dependency\" || InstallMCM == \"hard-dependency\" || InstallMCM == \"soft-dependency\")"
+    },
+    "RunKaosesCommon": {
+      "type": "computed",
+      "value": "(InstallKaosesCommon == \"hard-dependency\" )"
     },
     "RunButterLib": {
       "type": "computed",

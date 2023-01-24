@@ -52,6 +52,27 @@
       "isVisible": true
     },
     {
+      "id": "InstallKaosesCommon",
+      "name": {
+        "text": "Install Kaopses Common"
+      },
+      "choices": [
+        {
+          "id": "do-not-install",
+          "name": {
+            "text": "Do not install"
+          }
+        },
+        {
+          "id": "hard-dependency",
+          "name": {
+            "text": "Install and add reference in SubModule.xml"
+          }
+        }
+      ],
+      "isVisible": true
+    }
+    {
       "id": "InstallButterLib",
       "name": {
         "text": "Install ButterLib"
@@ -145,6 +166,27 @@
       "id": "gameVersion",
       "name": {
         "text": "Bannerlord Game Version for Reference Assemblies"
+      },
+      "isVisible": true
+    },
+    {
+      "id": "betaGameVersion",
+      "name": {
+        "text": "Bannerlord Beta Game Version for Reference Assemblies"
+      },
+      "isVisible": true
+    },
+    {
+      "id": "isStableVersion",
+      "name": {
+        "text": "Use Stable version directory"
+      },
+      "isVisible": true
+    },
+    {
+      "id": "isBetaVersionVersion",
+      "name": {
+        "text": "Use Beta Version Directory"
       },
       "isVisible": true
     },

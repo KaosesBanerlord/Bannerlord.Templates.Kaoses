@@ -9,11 +9,11 @@
     <ContentTargetFolders>content</ContentTargetFolders>
     <!-- This project has no .NET assemblies, so disable the warning for that -->
     <NoWarn>$(NoWarn);NU5128</NoWarn>
-    <Version>1.0.16</Version>
+    <Version>1.0.17</Version>
   </PropertyGroup>
 
   <PropertyGroup Label="Package">
-    <PackageId>Bannerlord.Templates.Kaoses</PackageId>
+    <PackageId>Bannerlord.Templates.KaosesMod</PackageId>
     <Title>Kaoses Mount &amp; Blade 2: Bannerlord, Module Templates</Title>
     <Authors>Lazeras, BUTR Team</Authors>
     <Description>Kaoses Project template for Mount &amp; Blade 2: Bannerlord.</Description>
@@ -31,8 +31,8 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <AssemblyName>Bannerlord.Templates.Kaoses</AssemblyName>
-    <RootNamespace>Bannerlord.Templates.Kaoses</RootNamespace>
+    <AssemblyName>Bannerlord.Templates.KaosesMod</AssemblyName>
+    <RootNamespace>Bannerlord.Templates.KaosesMod</RootNamespace>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 

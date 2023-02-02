@@ -3,14 +3,14 @@
   "author": "Lazeras, BUTR Team",
   "classifications": [
     "Bannerlord",
+    "KaosesMod",
     "Games"
   ],
   "name": "Kaoses Mount & Blade 2: Bannerlord Module",
   "generatorVersions": "[1.0.0.0-*)",
   "description": "Kaoses Project template for Mount & Blade 2: Bannerlord.",
-  "groupIdentity": "Bannerlord.Module",
   "precedence": "5000",
-  "identity": "Bannerlord.Templates.Kaoses",
+  "identity": "Bannerlord.Templates.KaosesMod",
   "shortName": "bltk",
   "tags": {
     "language": "C#",
@@ -19,7 +19,7 @@
   "sourceName": "BLNamespace",
   "preferNameDirectory": true,
   "guids": [
-    "84889846-e8dd-4c24-a8ee-0099a0573895"
+    "336381e8-6d81-4732-b07c-825ccfb5553f"
   ],
   "symbols": {
     "Framework": {

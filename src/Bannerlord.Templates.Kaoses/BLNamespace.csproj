@@ -88,7 +88,7 @@
     <PackageReference Condition="'$(ReferenceButterLib)' == 'true'" Include="Bannerlord.ButterLib" Version="2.5.1" IncludeAssets="compile" />
     <PackageReference Condition="'$(ReferenceMCM)' == 'true' AND '$(ReferenceMCMAsSoftDependency)' != 'true'" Include="Bannerlord.MCM" Version="5.3.2" IncludeAssets="compile" />
     <PackageReference Condition="'$(ReferenceMCM)' == 'true' AND '$(ReferenceMCMAsSoftDependency)' == 'true'" Include="Bannerlord.MCM" Version="5.3.2" />
-    <PackageReference Condition="'$(ReferenceKaosesComon)' == 'true'" Include="KaosesCommon" Version="1.0.8" IncludeAssets="compile" />
+    <PackageReference Condition="'$(ReferenceKaosesComon)' == 'true'" Include="KaosesCommon" Version="1.1.2" IncludeAssets="compile" />
 <!--/-:msbuild-conditional:noEmit -->
   <PackageReference Condition="$(ReferenceAssemblies) == 'false'" Include="Bannerlord.ReferenceAssemblies.Core" Version="$(GameVersion).*-*" PrivateAssets="All" />
     <PackageReference Condition="$(ReferenceAssemblies) == 'false'" Include="Bannerlord.ReferenceAssemblies.Native" Version="$(GameVersion).*-*" PrivateAssets="All" />

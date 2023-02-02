@@ -1,11 +1,4 @@
 # Bannerlord Module Template
-<p align="center">
-   <a href="https://www.nuget.org/packages/Bannerlord.Templates.Kaoses" alt="NuGet Bannerlord.MCM">
-   <img src="https://img.shields.io/nuget/v/Bannerlord.Templates.Kaoses.svg?label=NuGet%20Bannerlord.Templates.Kaoses&colorB=blue" /></a>
-</p>
-<p>
-   <img src="https://cdn.discordapp.com/attachments/555699650452258816/782380466727944192/unknown.png" width="800">
-</p>
 ## Overview
 Base on the template by the BUTR team from [GitHub](https://github.com/BUTR/Bannerlord.Module.Template) it has been customised for ease of use with Kaoses mods.
 

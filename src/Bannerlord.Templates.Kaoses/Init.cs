@@ -1,6 +1,7 @@
 using BLNamespace.Objects;
 using BLNamespace.Settings;
 using KaosesCommon.Utils;
+using KaosesCommon.Objects;
 
 namespace BLNamespace
 {
@@ -14,28 +15,21 @@ namespace BLNamespace
             /// Load the Settings Object
             Config settings = Factory.Settings;
 
+            //ConfigOther settings2 = Factory.Settings2;
+            //TempCoreConfig settings2 = Factory.SettingsCore;
+            //TempCoreConfig settings2 = TempCoreFactory.Settings;
+            //Factory.DConfig();
+
+
             ///
             /// Set IM variable values
             ///
-            IM.logToFile = settings.LogToFile;
-            IM.IsDebug = settings.Debug;
-            IM.ModVersion = Factory.ModVersion;
-            IM.PrePrend = SubModule.ModuleId;
-
-            ///
-            /// Set Logger variable values
-            ///
-            Logger.ModuleId = SubModule.ModuleId;
-            Logger._modulepath = SubModule.modulePath;
-
-            ///Uncomment to have a this prepended to log lines
-            //Logger.PrePrend = SubModule.ModuleFolder;
-
-            /// Uncomment to have date time added to log lines
-            //Logger.addDateTimeToLog = true;
-
-            /// Uncomment to override the log file path
-            //Logger.LogFilePath = "c:\\BannerLord\\KaosesCommon\\logfile.text";
+            InfoMgr im = new InfoMgr(settings.Debug, settings.LogToFile, SubModule.ModuleId, SubModule.modulePath);
+            Factory.IM.PrePrend = SubModule.ModuleId;
+            Factory.IM.ModVersion = settings.versionTextObj.ToString();
+            //Factory.IM.LogFilePath = "c:\\BannerLord\\KaosesCommon\\logfile.text";
+            //Factory.IM.AddDateTimeToLog = true;
+            Factory.IM = im;
         }
     }
 }

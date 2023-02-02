@@ -37,7 +37,7 @@ namespace BLNamespace
                 {
                     if (Kaoses.IsHarmonyLoaded())
                     {
-                        IM.MessageModLoaded();
+                        Factory.IM.MessageModLoaded();
                         try
                         {
                             if (_harmony == null)
@@ -50,21 +50,21 @@ namespace BLNamespace
                             }
 
                         } catch (Exception ex) {
-                            IM.ShowError(ex, Factory.Settings.ModName + " Harmony Error:");
+                            Factory.IM.ShowError(ex, Factory.Settings.ModName + " Harmony Error:");
                         }
                     }
-                    else { IM.MessageHarmonyLoadError(); }
+                    else { Factory.IM.MessageHarmonyLoadError(); }
                 }
                 else
                 {
                     #pragma warning disable CS0162 // Unreachable code detected
-                    IM.MessageModLoaded();
+                    Factory.IM.MessageModLoaded();
                     #pragma warning restore CS0162 // Unreachable code detected
                 }
             }
             catch (Exception ex)
             {
-                IM.ShowError(ex, "initial Loading Error "+ Factory.Settings.ModName);
+                Factory.IM.ShowError(ex, "initial Loading Error "+ Factory.Settings.ModName);
             }
         }
 

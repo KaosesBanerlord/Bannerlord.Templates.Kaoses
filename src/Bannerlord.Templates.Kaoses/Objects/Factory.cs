@@ -1,4 +1,5 @@
 using KaosesCommon.Utils;
+using KaosesCommon.Objects;
 using BLNamespace.Settings;
 using System.Reflection;
 
@@ -19,6 +20,20 @@ namespace BLNamespace.Objects
         /// </summary>
         public static bool MCMModuleLoaded { get; set; } = false;
 
+        private static InfoMgr? _im = null;
+
+        public static InfoMgr IM
+        {
+            get
+            {
+                return _im;
+            }
+            set
+            {
+                _im = value;
+            }
+        }
+
         /// <summary>
         /// MCM Settings Object Instance
         /// </summary>
@@ -31,7 +46,7 @@ namespace BLNamespace.Objects
                     _settings = Config.Instance;
                     if (_settings is null)
                     {
-                        IM.ShowMessageBox("$(ProjectModuleName) Failed to load MCM config provider", "$(ProjectModuleName) MCM Error");
+                        Factory.IM.ShowMessageBox("$(ProjectModuleName) Failed to load MCM config provider", "$(ProjectModuleName) MCM Error");
                     }
                 }
                 return _settings;

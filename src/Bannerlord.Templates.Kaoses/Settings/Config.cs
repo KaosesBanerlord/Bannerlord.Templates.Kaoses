@@ -31,7 +31,7 @@ namespace BLNamespace.Settings
         #region Translatable DisplayName 
         // Build mod display name with name and version form the project properties version
         #pragma warning disable CS8620 // Argument cannot be used for parameter due to differences in the null ability of reference types.
-        TextObject versionTextObj = new TextObject(typeof(Config).Assembly.GetName().Version?.ToString(3) ?? "");
+        public TextObject versionTextObj = new TextObject(typeof(Config).Assembly.GetName().Version?.ToString(3) ?? "");
         public override string DisplayName => new TextObject("{=BLNamespaceDisplayName}" + ModName + " " + versionTextObj.ToString())!.ToString();
         #pragma warning restore CS8620 // Argument cannot be used for parameter due to differences in the null ability of reference types.
         #endregion

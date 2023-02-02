@@ -21,12 +21,12 @@
     <Copyright>Copyright © BUTR. All rights Reserved</Copyright>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/lazeras/Bannerlord.Templates.Kaoses</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/KaosesBanerlord/Bannerlord.Templates.Kaoses</PackageProjectUrl>
     <PackageIcon>icon.png</PackageIcon>
-    <RepositoryUrl>https://github.com/lazeras/Bannerlord.Templates.Kaoses.git</RepositoryUrl>
+    <RepositoryUrl>https://github.com/KaosesBanerlord/Bannerlord.Templates.Kaoses.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>kaoses butr bannerlord</PackageTags>
-    <PackageReleaseNotes>https://github.com/lazeras/Bannerlord.Templates.Kaoses/releases</PackageReleaseNotes>
+    <PackageReleaseNotes>https://github.com/KaosesBanerlord/Bannerlord.Templates.Kaoses/releases</PackageReleaseNotes>
 		<!-- The directory .nuget packages are ouputed to if build .nuget package option is selected under build options in visual studio -->
     <NugetsOutput>U:\Nuget.Local</NugetsOutput>
   </PropertyGroup>
